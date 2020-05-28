@@ -11,9 +11,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("Request received")
 	msg, exist := os.LookupEnv("HELLO_MSG")
 	if exist {
-		fmt.Fprintf(w, "<h1>Hello %s!</h1>", msg)
+		fmt.Fprintf(w, "<h1>Hello %s!</h1>\n", msg)
 	} else {
-		fmt.Fprintf(w, "<h1>What are you waiting for?</h1>")
+		fmt.Fprintf(w, "<h1>What are you waiting for?</h1>\n")
 	}
 }
 
